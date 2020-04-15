@@ -22,11 +22,18 @@
 
    <script>
     
+    //e um jeito mais atual de chamar o elemento é através de query selector
+
+    var d = window.document.querySelector('div#msg')
+    d.style.background ='green'
+
+    //lembrando que no metodo querySelector se for id usa-se #, mas em classe usa-se o ponto, identico ao css
     
+
    // window.document.getElementById('msg').innerText = 'Ola'
     
-   var d = window.document.getElementById('msg')
-   d.style.background ='green'
+   //var d = window.document.getElementById('msg')
+   //d.style.background ='green'
 
    /* duas formas de alterar o conteudo da tag id declarada dentro da div
    ----------------------------------------------------------------
