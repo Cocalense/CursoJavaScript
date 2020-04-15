@@ -17,7 +17,7 @@
     </style>
 </head>
 <body>
-    <div id="area" onclick="clicar()">
+    <div id="area" onclick="clicar()" onmouseenter ="entrar()"
         Interaja...
     </div>
 
@@ -28,6 +28,10 @@
             window.document.querySelector('div#area')
             */
             a.innerText = 'Clicou!'
+        }
+        function entrar(){
+            var a = window.document.getElementById('area')
+            a.innerText = 'Entrou'
         }
 
     </script>
