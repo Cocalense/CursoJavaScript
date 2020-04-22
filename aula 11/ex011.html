@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-Br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Nacionalidade</title>
+    <style>
+        body{
+            background-color: rgb(231, 193, 188);
+            font: normal 18px Arial;
+            
+        
+        }
+        div#contentor{
+            display: block;
+            position: relative;
+            border: 2px solid red;
+            width: 550px;
+            height: auto;
+            margin-left: 10%;
+            margin-top: 5%;
+
+        }
+        input{
+            margin-right: 25px;
+            font: normal 18px Arial;
+        }
+        div#res{
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div id="contentor">
+    <h1>Qual o seu país de origem ?</h1>
+    Digite o seu país : <input type="text" name="pais" id="pais">
+    <input type="button" value="Analisar" onclick="analisar()">
+    <div id= "res">
+
+    </div>
+    <script>       
+        function analisar(){            
+            var txtp = window.document.getElementById('pais')
+            var res = window.document.getElementById('res')
+            var orig =(txtp.value)
+            res.innerHTML = ` Seu país de origem é ${orig}.`
+            if (orig != 'Brasil'){
+                res.innerHTML +=`<p>Você é cidadão estrangeiro. !</p>`
+            }else{
+                res.innerHTML +=`<p>Você é brasuca.</p>`
+        }
+    }
+
+    </script>
+    </div>
+</body>
+</html>
