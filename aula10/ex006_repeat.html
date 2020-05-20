@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eventos</title>
+    <style>
+        div#area{
+            font: normal 20pt Arial;
+            background: rgb(155, 243, 114);
+            color: white;
+            width: 200px;
+            height: 200px;
+            line-height: 200px;
+            text-align: center;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="area" onclick="clicar()" onmouseenter ='entrar()' onmouseout = 'sair()'>
+        interajaaaa
+    </div>
+
+
+    <script>
+        function clicar(){
+            var a = document.getElementById('area')
+            a.innerText = 'clicou'
+            a.style.background = 'red'
+        }
+        function entrar(){
+            var a = document.getElementById('area')
+            a.innerText = 'entrou'
+            a.style.background ='blue'
+        }
+        function sair(){
+            var a = document.getElementById('area')
+            a.innerText = 'saiu'
+            a.style.background =' rgb(155, 243, 114)'
+        }
+
+        /*
+        poderiamos fazer o comando acima diretamente em JS, deixando o html limpo:
+
+        var a = document.getElementById('area')
+        a.addEventListener('click', clicar)
+        a.addEventListener('mouseenter', entrar)
+        a.addEventListener('mouseout', sair)
+        */
+    </script>
+</body>
+</html>
