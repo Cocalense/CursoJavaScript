@@ -3,24 +3,31 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Somando Numeros</title>
+    <title>Somando Números</title>
     <style>
-        body{
-            font :normal 18pt Arial;
-        }
-        input{
-            font: normal 18pt Arial;
-            width: 100px;
-        }
-        div#res{
-            margin-top: 20px;
-        }
+       body{
+           font: normal 20pt Arial;
+       } 
+       input{
+           font: normal 18pt Arial;
+           width: 100px;
+           box-shadow: lightslategrey 2px 2px 15px;
+       }
+       ::placeholder{
+           font: normal 12pt Arial;
+           font-style: italic;
+       }
+       div#res{
+           font: normal 18pt Arial;
+           margin-top: 15px;
+       }
     </style>
 </head>
 <body>
     <h1>Somando Valores</h1>
-    <input type="number" name="txtn1" id="txtn1"> +
-    <input type="number" name="txtn2" id="txtn2">
+
+    <input type="number" name="txtn1" id="txtn1" placeholder="Digite um valor aqui"> +
+    <input type="number" name="txtn1" id="txtn2" placeholder="Digite outro valor aqui">
     <input type="button" value="Somar" onclick="somar()">
     <div id="res">Resultado : </div>
     <script>
@@ -28,11 +35,11 @@
             var tn1 = document.getElementById('txtn1')
             var tn2 = document.getElementById('txtn2')
             var res = document.getElementById('res')
-            var n1 = Number.parseInt(tn1.value)
-            var n2 = Number.parseInt(tn2.value)
+            var n1 = Number(tn1.value)
+            var n2 = Number(tn2.value)
             var s = n1 + n2
-            res.innerHTML = `O resultado de ${n1} + ${n2} será : <strong>${s} </strong> .`
-        }
+            res.innerHTML = `A soma entre ${n1} e ${n2} é <strong>${s} </strong>`
+        }    
     </script>
 </body>
 </html>
